@@ -3,6 +3,13 @@
 #include <cstring>
 #include "String.h"
 
+String::String(const String &str)
+{
+    sz = str.len();
+    s = new char[sz + 1];
+    strcpy(s, str.s);
+}
+
 String::String(const char *str)
 {
     sz = strlen(str);

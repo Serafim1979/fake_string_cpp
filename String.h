@@ -7,6 +7,7 @@ private:
     char *s;
     int sz;
 public:
+    String(const String &);
     String(const char *str = "");
     ~String();
 
