@@ -13,6 +13,8 @@ public:
 
     int len()const {return sz;}  // inline
     void print()const;
+
+    String & operator = (const String &);
 };
 
 #endif

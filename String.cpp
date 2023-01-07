@@ -21,6 +21,15 @@ String::String(const char *str)
     strcpy(s, str);
 }
 
+String & String::operator=(const String &str)
+{
+    delete[] s;
+    sz = str.len();
+    s = new char[sz + 1];
+    strcpy(s, str.s);
+    return *this;
+}
+
 String::~String()
 {
     delete[] s;
