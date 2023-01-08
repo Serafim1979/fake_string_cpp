@@ -23,6 +23,11 @@ String::String(const char *str)
 
 String & String::operator=(const String &str)
 {
+    if(this == &str)
+    {
+        return *this;
+    }
+    
     delete[] s;
     sz = str.len();
     s = new char[sz + 1];
